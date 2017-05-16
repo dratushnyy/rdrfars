@@ -7,10 +7,10 @@
 fars_read(filename)
 }
 \arguments{
-\item{filename}{A string.}
+\item{filename}{A string. Path to cvs data file.}
 }
 \value{
-Loaded FARS data as \code{\link{dplyr::tbl_df}}.
+Loaded FARS data as \code{\link[dplyr]{tbl_df}}
 }
 \description{
 Reads FARS (Fatality Analysis Reporting System) data from cvs file.
@@ -20,6 +20,7 @@ Reads FARS (Fatality Analysis Reporting System) data from cvs file.
 Function will stop if provided file not found
 }
 \examples{
+fars_read("my_data.csv.bz2")
 fars_read("my_data.csv")
 }
 

@@ -10,7 +10,7 @@ fars_read_years(years)
 \item{years}{A vector of years values (numbers)}
 }
 \value{
-readed FARS data as \code{\link{dplyr::tbl_df}}.
+readed FARS data as \code{\link[dplyr]{tbl_df}}
 }
 \description{
 Read FARS (Fatality Analysis Reporting System) data for years

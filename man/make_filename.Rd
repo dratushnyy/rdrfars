@@ -10,7 +10,7 @@ make_filename(year)
 \item{year}{A number.}
 }
 \value{
-generated archive file name
+generated archive file as string
 }
 \description{
 Genarates archive file name based on year value
@@ -18,5 +18,6 @@ Genarates archive file name based on year value
 \examples{
 make_filename("2011")
 make_filename(2011)
+
 }
 

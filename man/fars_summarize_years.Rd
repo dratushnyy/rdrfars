@@ -10,7 +10,7 @@ fars_summarize_years(years)
 \item{years}{A vector of years values (numbers) to summarize}
 }
 \value{
-Summarized informaion about accidents
+Summarized informaion about accidents as \code{\link[dplyr]{tbl_df}}.
 }
 \description{
 Summarize accidents from FARS data by year and month

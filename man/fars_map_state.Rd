@@ -9,10 +9,11 @@ fars_map_state(state.num, year)
 \arguments{
 \item{state.num}{US state index (string)}
 
-\item{years}{A year value (number)}
+\item{year}{A year value (number)}
 }
 \value{
-summarized informaion about accidents for year for state
+summarized informaion on map about accidents for year for state as
+ \code{\link[maps]{map}}.
 }
 \description{
 Summarize accidents by year and state
@@ -24,6 +25,6 @@ Function will skip year if file with data for year does not exists
 Function will stop if invalid state provided
 }
 \examples{
-fars_summarize_years("01", 2001)
+fars_map_state("01", 2001)
 }
 

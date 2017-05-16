@@ -8,7 +8,7 @@
 #' @section Warning:
 #' Function will stop if provided file not found
 #'
-#' @return Loaded FARS data as \code{\link{dplyr::tbl_df}}.
+#' @return Loaded FARS data as \code{\link[dplyr]{tbl_df}}
 #'
 #' @examples
 #' fars_read("my_data.csv.bz2")
@@ -26,7 +26,7 @@ fars_read <- function(filename) {
 #'
 #' @param year A number.
 #'
-#' @return generated archive file name
+#' @return generated archive file as string
 #'
 #' @examples
 #' make_filename("2011")
@@ -46,7 +46,7 @@ make_filename <- function(year) {
 #' @section Warning:
 #' Function will skip year if file with data for year does not exists
 #'
-#' @return readed FARS data as \code{\link{dplyr::tbl_df}}.
+#' @return readed FARS data as \code{\link[dplyr]{tbl_df}}
 #'
 #' @examples
 #' fars_read_years(c(2001:2011))
@@ -74,7 +74,7 @@ fars_read_years <- function(years) {
 #' @section Warning:
 #' Function will skip year if file with data for year does not exists
 #'
-#' @return Summarized informaion about accidents as \code{\link{dplyr::tbl_df}}.
+#' @return Summarized informaion about accidents as \code{\link[dplyr]{tbl_df}}.
 #'
 #' @examples
 #' fars_summarize_years(c(2001:2011))
@@ -95,17 +95,18 @@ fars_summarize_years <- function(years) {
 #' @import maps
 #'
 #' @param state.num US state index (string)
-#' @param years A year value (number)
+#' @param year A year value (number)
+#'
 #' @section Warning:
 #' Function will skip year if file with data for year does not exists
 #'
 #' Function will stop if invalid state provided
 #'
 #' @return summarized informaion on map about accidents for year for state as
-#'  \code{\link{maps::map}}.
+#'  \code{\link[maps]{map}}.
 #'
 #' @examples
-#' fars_summarize_years("01", 2001)
+#' fars_map_state("01", 2001)
 fars_map_state <- function(state.num, year) {
   filename <- make_filename(year)
   data <- fars_read(filename)
