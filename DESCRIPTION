@@ -10,8 +10,8 @@ Description: Package contains fuctions to load and process
     reading FARS data,
     summarizing FARS data by years
     summarizing FARS data by year and state
-Imports: readr, dplyr, tidyr,
-Required: readr, dplyr, tidyr
+Imports: readr, dplyr, tidyr, maps
+Required: readr, dplyr, tidyr, maps
 Encoding: UTF-8
 License: MIT
 LazyData: true
