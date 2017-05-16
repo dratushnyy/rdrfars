@@ -24,7 +24,4 @@ Function will skip year if file with data for year does not exists
 
 Function will stop if invalid state provided
 }
-\examples{
-fars_map_state("01", 2001)
-}
 

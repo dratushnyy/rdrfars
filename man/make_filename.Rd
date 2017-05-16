@@ -16,8 +16,7 @@ generated archive file as string
 Genarates archive file name based on year value
 }
 \examples{
-make_filename("2011")
-make_filename(2011)
-
+\dontrun{make_filename("2011")}
+\dontrun{make_filename(2011)}
 }
 

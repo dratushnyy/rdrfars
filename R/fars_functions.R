@@ -1,5 +1,6 @@
 #' Reads FARS (Fatality Analysis Reporting System) data from cvs file.
 #'
+#' @export
 #' @import readr
 #' @import dplyr
 #'
@@ -11,8 +12,7 @@
 #' @return Loaded FARS data as \code{\link[dplyr]{tbl_df}}
 #'
 #' @examples
-#' fars_read("my_data.csv.bz2")
-#' fars_read("my_data.csv")
+#' \dontrun{fars_read("accident_2014.csv.bz2")}
 fars_read <- function(filename) {
         if(!file.exists(filename))
                 stop("file '", filename, "' does not exist")
@@ -24,14 +24,15 @@ fars_read <- function(filename) {
 
 #' Genarates archive file name based on year value
 #'
+#' @export
+#'
 #' @param year A number.
 #'
 #' @return generated archive file as string
 #'
 #' @examples
-#' make_filename("2011")
-#' make_filename(2011)
-#'
+#' \dontrun{make_filename("2011")}
+#' \dontrun{make_filename(2011)}
 make_filename <- function(year) {
         year <- as.integer(year)
         sprintf("accident_%d.csv.bz2", year)
@@ -39,6 +40,7 @@ make_filename <- function(year) {
 
 #' Read FARS (Fatality Analysis Reporting System) data for years
 #'
+#' @export
 #' @import dplyr
 #'
 #' @param years A vector of years values (numbers)
@@ -49,10 +51,11 @@ make_filename <- function(year) {
 #' @return readed FARS data as \code{\link[dplyr]{tbl_df}}
 #'
 #' @examples
-#' fars_read_years(c(2001:2011))
-#' fars_read_years(c(2001,2002, 2004))
+#' \dontrun{fars_read_years(c(2013:2015))}
+#' \dontrun{fars_read_years(c(2013,2015))}
 fars_read_years <- function(years) {
         lapply(years, function(year) {
+                MONTH <- NULL
                 file <- make_filename(year)
                 tryCatch({
                         dat <- fars_read(file)
@@ -67,6 +70,7 @@ fars_read_years <- function(years) {
 
 #' Summarize accidents from FARS data by year and month
 #'
+#' @export
 #' @import dplyr
 #'
 #' @param years A vector of years values (numbers) to summarize
@@ -77,10 +81,11 @@ fars_read_years <- function(years) {
 #' @return Summarized informaion about accidents as \code{\link[dplyr]{tbl_df}}.
 #'
 #' @examples
-#' fars_summarize_years(c(2001:2011))
-#' fars_summarize_years(c("2004, 2008"))
+#' \dontrun{fars_summarize_years(c(2001:2011))}
+#' \dontrun{fars_summarize_years(c("2004, 2008"))}
 fars_summarize_years <- function(years) {
         year <- NULL
+        MONTH <- NULL
         dat_list <- fars_read_years(years)
         dplyr::bind_rows(dat_list) %>%
                 dplyr::group_by(year, MONTH) %>%
@@ -91,6 +96,7 @@ fars_summarize_years <- function(years) {
 
 #' Summarize accidents by year and state
 #'
+#' @export
 #' @import dplyr
 #' @import graphics
 #' @import maps
@@ -106,8 +112,6 @@ fars_summarize_years <- function(years) {
 #' @return summarized informaion on map about accidents for year for state as
 #'  \code{\link[maps]{map}}.
 #'
-#' @examples
-#' fars_map_state("01", 2001)
 fars_map_state <- function(state.num, year) {
   STATE <- MONTH <-  NULL
   LATITUDE <- LONGITUD <- NULL

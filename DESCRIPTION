@@ -11,7 +11,7 @@ Description: Package contains fuctions to load and
 Imports: readr, dplyr, tidyr, maps
 Required: readr, dplyr, tidyr, maps
 Encoding: UTF-8
-License: MIT
+License: MIT + file LICENSE
 LazyData: true
 RoxygenNote: 5.0.1
 Suggests: testthat

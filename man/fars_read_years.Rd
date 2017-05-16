@@ -20,7 +20,7 @@ Read FARS (Fatality Analysis Reporting System) data for years
 Function will skip year if file with data for year does not exists
 }
 \examples{
-fars_read_years(c(2001:2011))
-fars_read_years(c(2001,2002, 2004))
+\dontrun{fars_read_years(c(2013:2015))}
+\dontrun{fars_read_years(c(2013,2015))}
 }
 
