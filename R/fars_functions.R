@@ -80,6 +80,7 @@ fars_read_years <- function(years) {
 #' fars_summarize_years(c(2001:2011))
 #' fars_summarize_years(c("2004, 2008"))
 fars_summarize_years <- function(years) {
+        year <- NULL
         dat_list <- fars_read_years(years)
         dplyr::bind_rows(dat_list) %>%
                 dplyr::group_by(year, MONTH) %>%
@@ -108,6 +109,8 @@ fars_summarize_years <- function(years) {
 #' @examples
 #' fars_map_state("01", 2001)
 fars_map_state <- function(state.num, year) {
+  STATE <- MONTH <-  NULL
+  LATITUDE <- LONGITUD <- NULL
   filename <- make_filename(year)
   data <- fars_read(filename)
   state.num <- as.integer(state.num)

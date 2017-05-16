@@ -4,12 +4,10 @@ Title: What the Package Does (Title Case)
 Version: 0.1.0
 Author: Dmitry Ratushnyy
 Maintainer: Dmitry Ratushnyy <d.ratushnyy@gmail.com>
-Description: Package contains fuctions to load and process
-    FARS(Fatality Analysis Reporting System) data.
-    Provided functionality:
-    reading FARS data,
-    summarizing FARS data by years
-    summarizing FARS data by year and state
+Description: Package contains fuctions to load and 
+process FARS (Fatality Analysis Reporting System) data.
+The package provides following funtionality: reading FARS data, 
+summarizing FARS data by years, summarizing FARS data by year and state.
 Imports: readr, dplyr, tidyr, maps
 Required: readr, dplyr, tidyr, maps
 Encoding: UTF-8
