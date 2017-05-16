@@ -1,5 +1,5 @@
 test_that("can_read_existing_file", {
-  loaded <- fars_read("accident_2013.csv")
+  loaded <- fars_read("accident_2013.csv.bz2")
   expect_is(loaded, "data.frame")
   expect_equal(length(loaded), 50)
 })

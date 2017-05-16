@@ -54,7 +54,6 @@ make_filename <- function(year) {
 fars_read_years <- function(years) {
         lapply(years, function(year) {
                 file <- make_filename(year)
-                print(file)
                 tryCatch({
                         dat <- fars_read(file)
                         dplyr::mutate(dat, year = year) %>%
