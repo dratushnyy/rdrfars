@@ -13,6 +13,7 @@ Description: Package contains fuctions to load and process
 Imports: readr, dplyr, tidyr,
 Required: readr, dplyr, tidyr
 Encoding: UTF-8
+License: MIT
 LazyData: true
 RoxygenNote: 5.0.1
 Suggests: testthat
