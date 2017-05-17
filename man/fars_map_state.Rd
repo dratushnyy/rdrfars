@@ -2,7 +2,7 @@
 % Please edit documentation in R/fars_functions.R
 \name{fars_map_state}
 \alias{fars_map_state}
-\title{Summarize accidents by year and state}
+\title{Display accidents state locations by year}
 \usage{
 fars_map_state(state.num, year)
 }
@@ -12,11 +12,11 @@ fars_map_state(state.num, year)
 \item{year}{A year value (number)}
 }
 \value{
-summarized informaion on map about accidents for year for state as
- \code{\link[maps]{map}}.
+this function returns a US state map with dots representing the
+fatalities in a given year for a FARS file
 }
 \description{
-Summarize accidents by year and state
+Display accidents state locations by year
 }
 \section{Warning}{
 

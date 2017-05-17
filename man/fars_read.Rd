@@ -19,7 +19,7 @@ Reads FARS (Fatality Analysis Reporting System) data from cvs file.
 
 Function will stop if provided file not found
 }
+
 \examples{
 \dontrun{fars_read("accident_2014.csv.bz2")}
 }
-

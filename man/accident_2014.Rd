@@ -11,4 +11,3 @@ Fatality Analysis Reporting System for 2014 year
 \url{https://www-fars.nhtsa.dot.gov/Main/index.aspx}
 }
 \keyword{data}
-

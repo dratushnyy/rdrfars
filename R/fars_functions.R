@@ -93,8 +93,7 @@ fars_summarize_years <- function(years) {
                 tidyr::spread(year, n)
 }
 
-
-#' Summarize accidents by year and state
+#' Display accidents state locations by year
 #'
 #' @export
 #' @import dplyr
@@ -109,8 +108,8 @@ fars_summarize_years <- function(years) {
 #'
 #' Function will stop if invalid state provided
 #'
-#' @return summarized informaion on map about accidents for year for state as
-#'  \code{\link[maps]{map}}.
+#' @return this function returns a US state map with dots representing the
+#' fatalities in a given year for a FARS file
 #'
 fars_map_state <- function(state.num, year) {
   STATE <- MONTH <-  NULL

@@ -19,4 +19,3 @@ Genarates archive file name based on year value
 \dontrun{make_filename("2011")}
 \dontrun{make_filename(2011)}
 }
-

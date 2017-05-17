@@ -19,8 +19,8 @@ Summarize accidents from FARS data by year and month
 
 Function will skip year if file with data for year does not exists
 }
+
 \examples{
 \dontrun{fars_summarize_years(c(2001:2011))}
 \dontrun{fars_summarize_years(c("2004, 2008"))}
 }
-
