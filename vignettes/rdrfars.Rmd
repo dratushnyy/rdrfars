@@ -93,7 +93,7 @@ fars_map_state("01", 2013)
 
 Will produce following map:
 ```{r echo=FALSE, out.width='100%'}
-knitr::include_graphics('../man/Rplot01.png')
+knitr::include_graphics('./map01_2013.png')
 ```
 
 
